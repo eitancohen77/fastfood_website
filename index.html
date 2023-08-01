@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 75px;
+            height: 75px;
+            margin-right: 20px;
+        }
+        img:hover {
+            opacity: 0.7;
+        }
+        #linkName {
+            margin-left: 25px;
+        }
+        iframe {
+            margin-left: 30%;
+            width: 500px;
+            height: 300px;
+            border: 3px solid red;
+        }
+        h1 {
+            font-size: 80px;
+            padding: none;
+            display:inline;
+        }
+        h2 {
+            font-family: Helvetica, sans-serif;
+            margin-left: 40%;
+        }
+        #orderBox {
+            margin-left: 35%;
+        }
+        input[input=text]:focus + label{
+            font-weight: bold;
+        }
+        body {
+            background-color: rgb(0, 0, 0, 0.1);
+            height:100%;
+        }
+        table {
+            border-collapse: collapse
+        }
+        label {
+            font-size: 30px;
+        }
+        input {
+            width: 300px;
+            height: 30px;
+            font-size: 20px
+        }
+        option {
+            font-size: 30px;
+        }
+        #submitButton {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        #submitButton:hover {
+            background-color: rgb(255, 0, 0, 0.2);
+            transition: 0.2s;
+        }
+        table {
+            width: 400px;
+        }
+        .checkBox {
+            width: 20px;
+            height: 20px;
+        }
+        #checkBoxBorder {
+            display: inline;
+        }
+
+        #orderContainer {
+            margin-left: 30%;
+            width: 40%;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .order {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div>
+            <a href="https://www.chipotle.com/">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Chipotle_Mexican_Grill_logo.svg/1280px-Chipotle_Mexican_Grill_logo.svg.png">        </a>
+                <h1>Welcome to Chiptole</h1>
+                <a id="linkName" href="https://www.chipotle.com/">To Visit our Official Site</a>
+
+        </div>
+    </center>
+    <hr>
+    <br><br>
+    <span>
+        <div>
+            <h2>Watch Our official Video</h3>
+        </div>
+        <iframe src="https://www.youtube.com/embed/t3-W14Ag6nA" frameborder="0"></iframe>
+</span>
+    <br><br>
+    <hr>
+
+        <h2>What would you like to Order</h2>
+        <div id="orderBox">
+            <form action="POST" id="orderForm">
+                <table border="2px">
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender:</label></td>
+                        <td>
+                            <select name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="major">Major:</label></td>
+                        <td><input type="text" name="major"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Date:</label></td>
+                        <td><input type="date" name="date" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="preference">Preferences</label></td>
+                        <td>
+                            <div id="checkBoxBorder">
+                                <input class="checkBox" type="checkbox" name="preference" value="Lettuce">Lettuce
+                                <input class="checkBox" type="checkbox" name="preference" value="Beans">Beans
+                                <input class="checkBox" type="checkbox" name="preference" value="Fajita">Fajita
+                                <input class="checkBox" type="checkbox" name="preference" value="Pollo asada">Pollo 
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address:</label></td>
+                        <td><textarea name="address" ></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phoneNumber">Phone Number:</label></td>
+                        <td><input type="text" name="phoneNumber" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <input id ="submitButton" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div id="orderContainer"></div>
+
+        <script src="app.js"></script>
+</body>
+</html>
